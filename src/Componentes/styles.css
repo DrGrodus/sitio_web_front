@@ -1,0 +1,107 @@
+
+body {
+    margin: 0;
+}
+
+ .container {
+     margin: 1rem;
+     text-align: center;
+
+ }
+
+.nav {
+    background-color: #333;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 0 1rem;
+}
+
+.nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+
+.nav a {
+    color: inherit;
+    text-decoration: none;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: .25rem;
+}
+
+.nav li:hover {
+    background-color: #777;
+}
+
+ .nav li.active {
+     background-color: #555;
+ }
+
+ /* <Acceso> */
+ .mb-2 {
+     font-size: xx-large;
+     text-align: center;
+ }
+
+#FormAcceso {
+     width: 50%;
+     text-align: left;
+     margin: 0 auto;
+ }
+ 
+ .botonesAcc {
+     margin-left: 10px;
+     margin-right: 10px;
+ }
+
+ /* </Acceso> */
+
+/* <Contacto> */
+#FormContacto {
+    width: 50%;
+    text-align: left;
+    margin: 0 auto;
+}
+
+.botonContacto {
+    align-content: center;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+/* </Contacto> */
+
+/* <Nosotros> */
+
+#seccion_nosotros {
+    text-align: left;
+    margin: 0 auto;
+    width: 60%;
+    text-justify: inter-character;
+}
+
+/* </Nosotros> */
+
+/* <Inicio> */
+
+.fotosInicio {
+    width: 20%;
+    height: 25%;
+}
+
+.Caption {
+    color: red;
+}
+
+
+/* </Inicio> */
