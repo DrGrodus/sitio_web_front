@@ -17,13 +17,16 @@ export default function Navbar() {
                 <Linko to="/login">
                     <center>
                         <FontAwesomeIcon icon={faUser}/>
-                        <p>Login</p>
+                        <p>Iniciar sesión</p>
                     </center>
                 </Linko>
                 <Linko to="/carrito">
                     <center>
-                        <FontAwesomeIcon icon={faCartShopping} />
-                        <p>Carrito</p>
+                        <div className="carrito">
+                            <FontAwesomeIcon icon={faCartShopping}/>
+                            <p>Carrito</p>
+                            <p className="cantidadCarrito">0</p>
+                        </div>
                     </center>
                 </Linko>
             </ul>

@@ -1,50 +1,74 @@
-import {Carousel} from "react-bootstrap";
-import Tel1 from "../img/TelefonoUno.jpg";
-import Tel2 from "../img/TelefonoDos.jpg"
-import Tel3 from "../img/TelefonoTres.jpg"
+import {Button, Card, Col, Row} from "react-bootstrap";
+import Tel1 from "../img/TelUno.jpg";
+import Tel2 from "../img/TelDos.jpg"
+import Tel3 from "../img/TelTres.jpg"
+import Tel4 from "../img/TelCuatro.jpg"
+import Tel5 from "../img/TelCinco.jpg"
+import Tel6 from "../img/TelSeis.jpg"
 import "../Componentes/styles.css"
 
-export default function Inicio(){
+export default function Inicio() {
     return (
         <>
             <h1>Pagina Principal</h1>
-            <Carousel>
-                <Carousel.Item>
-                    <img
-                        className="fotosInicio"
-                        src={Tel1}
-                        alt="Primer producto"
-                    />
-                    <Carousel.Caption className="Caption">
-                        <h3>Primer producto</h3>
-                        <p>Este es el primer producto</p>
-                    </Carousel.Caption>
-                </Carousel.Item>
+            <div className="tienda" id="tienda">
+                <Row xs={2} md={3} lg={3} style={{padding: "10%"}}>
+                    <Col>
+                        <Card>
+                            <Card.Img
+                                variant="top"
+                                src={Tel1}
+                                bsPrefix="fotosInicio"
+                                alt="Primer producto tarjeta"/>
+                            <Card.Body>
+                                <Card.Title>Titulo de tarjeta</Card.Title>
+                                <Card.Text>Texto de ejemplo</Card.Text>
+                                <div className="botonesInicio">
+                                    <Button variant="primary">Ver más</Button>
+                                    <Button variant="secondary">Agregar al carrito</Button>
+                                </div>
+                            </Card.Body>
+                        </Card>
+                    </Col>
 
-                <Carousel.Item>
-                    <img
-                        className="fotosInicio"
-                        src={Tel2}
-                        alt="Segundo producto"
-                    />
-                    <Carousel.Caption className="Caption">
-                        <h3>Segundo producto</h3>
-                        <p>Este es el segundo producto</p>
-                    </Carousel.Caption>
-                </Carousel.Item>
+                    <Col>
+                        <Card>
+                            <Card.Img
+                                variant="top"
+                                src={Tel2}
+                                bsPrefix="fotosInicio"
+                                alt="Segundo producto tarjeta"/>
+                            <Card.Body>
+                                <Card.Title>Titulo de tarjeta</Card.Title>
+                                <Card.Text>Texto de ejemplo</Card.Text>
+                                <div className="botonesInicio">
+                                    <Button variant="primary">Ver más</Button>
+                                    <Button variant="secondary">Agregar al carrito</Button>
+                                </div>
+                            </Card.Body>
+                        </Card>
+                    </Col>
 
-                <Carousel.Item>
-                    <img
-                        className="fotosInicio"
-                        src={Tel3}
-                        alt="Tercer producto"
-                    />
-                    <Carousel.Caption className="Caption">
-                        <h3>Tercer producto</h3>
-                        <p>Este es el tercer producto</p>
-                    </Carousel.Caption>
-                </Carousel.Item>
-            </Carousel>
+                    <Col>
+                        <Card>
+                            <Card.Img
+                                variant="top"
+                                src={Tel3}
+                                bsPrefix="fotosInicio"
+                                alt="Tercer producto tarjeta"/>
+                            <Card.Body>
+                                <Card.Title>Titulo de tarjeta</Card.Title>
+                                <Card.Text>Texto de ejemplo</Card.Text>
+                                <div className="botonesInicio">
+                                    <Button variant="primary">Ver más</Button>
+                                    <Button variant="secondary">Agregar al carrito</Button>
+                                </div>
+                            </Card.Body>
+                        </Card>
+                    </Col>
+                </Row>
+            </div>
+
         </>
     );
 }

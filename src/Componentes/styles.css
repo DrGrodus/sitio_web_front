@@ -3,6 +3,7 @@ body {
     margin: 0;
 }
 
+/* <Navbar> */
  .container {
      margin: 1rem;
      text-align: center;
@@ -44,6 +45,25 @@ body {
  .nav li.active {
      background-color: #555;
  }
+
+.carrito {
+    position: relative;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.cantidadCarrito {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 1.3rem;
+    background-color: red;
+    color: white;
+    border-radius: 10%;
+    padding: 3px;
+}
+
+/* </Navbar> */
 
  /* <Acceso> */
  .mb-2 {
@@ -94,6 +114,14 @@ body {
 
 /* <Inicio> */
 
+.tienda {
+
+}
+
+#tienda {
+
+}
+
 .fotosInicio {
     width: 20%;
     height: 25%;
@@ -101,6 +129,12 @@ body {
 
 .Caption {
     color: red;
+}
+
+.botonesInicio {
+    alignment: center;
+    display: block;
+    overflow: hidden;
 }
 
 
