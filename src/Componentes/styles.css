@@ -60,7 +60,7 @@ body {
     background-color: red;
     color: white;
     border-radius: 10%;
-    padding: 3px;
+    padding: 5%;
 }
 
 /* </Navbar> */
@@ -115,11 +115,10 @@ body {
 /* <Inicio> */
 
 .tienda {
-
-}
-
-#tienda {
-
+    width: 70%;
+    margin: 0 auto;
+    display: grid;
+    /*grid-template-columns: repeat(3, 60%);*/
 }
 
 .fotosInicio {
@@ -133,9 +132,13 @@ body {
 
 .botonesInicio {
     alignment: center;
-    display: block;
+    display: flex;
+    flex-direction: column;
     overflow: hidden;
+    gap: 12px;
 }
+
+
 
 
 /* </Inicio> */
