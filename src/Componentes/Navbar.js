@@ -5,6 +5,11 @@ import {faCartShopping, faUser} from '@fortawesome/free-solid-svg-icons';
 import logo from '../img/iconLogoEmpresa.png'
 
 export default function Navbar() {
+
+    /*const [show, setShow] = useState(false);
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);*/
+
     return (
         <nav className="nav">
             <ul id="navbar">
@@ -29,6 +34,14 @@ export default function Navbar() {
                         </div>
                     </center>
                 </Linko>
+                {/*<Modal show={show} onHide={handleClose}>
+                    <Modal.Header closeButton>
+                        <Modal.Title>Carrito</Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>
+                        a
+                    </Modal.Body>
+                </Modal>*/}
             </ul>
         </nav>
     );
