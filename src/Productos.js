@@ -57,8 +57,8 @@ function getInfoDelProducto(id) {
         console.log("La información del producto no existe para el ID: " + id);
         return undefined;
     }
-    return productoInfo;
 
+    return productoInfo;
 }
 
 export {items, getInfoDelProducto};

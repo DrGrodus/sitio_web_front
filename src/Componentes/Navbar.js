@@ -2,13 +2,12 @@ import "./styles.css"
 import {Link, useMatch, useResolvedPath} from "react-router-dom";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faCartShopping, faUser} from '@fortawesome/free-solid-svg-icons';
-import logo from '../img/iconLogoEmpresa.png'
+import logo from '../img/iconLogoEmpresa.png';
+import {ContextoCarrito} from '../ContextoCarrito.js';
+import {useContext} from 'react';
 
 export default function Navbar() {
-
-    /*const [show, setShow] = useState(false);
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);*/
+    const carrito = useContext(ContextoCarrito);
 
     return (
         <nav className="nav">
@@ -34,14 +33,6 @@ export default function Navbar() {
                         </div>
                     </center>
                 </Linko>
-                {/*<Modal show={show} onHide={handleClose}>
-                    <Modal.Header closeButton>
-                        <Modal.Title>Carrito</Modal.Title>
-                    </Modal.Header>
-                    <Modal.Body>
-                        a
-                    </Modal.Body>
-                </Modal>*/}
             </ul>
         </nav>
     );

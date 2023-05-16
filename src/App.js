@@ -7,10 +7,12 @@ import Contacto from "./paginas/Contacto";
 import Carrito from "./paginas/Carrito";
 import {Route, Routes} from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import ProveedorCarrito from './ContextoCarrito';
 
 function App() {
     return (
         <>
+            <ProveedorCarrito>
             <Navbar/>
             <div className="container">
                 <Routes>
@@ -21,7 +23,9 @@ function App() {
                     <Route path="/carrito" element={<Carrito/>}/>
                 </Routes>
             </div>
+            </ProveedorCarrito>
         </>
+
     );
 }
 

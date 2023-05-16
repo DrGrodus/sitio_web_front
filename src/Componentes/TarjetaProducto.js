@@ -1,7 +1,11 @@
-import {Card, Button} from 'react-bootstrap'
+import {Card, Button, Form, Row, Col} from 'react-bootstrap'
+import {ContextoCarrito} from '../ContextoCarrito.js';
+import {useContext} from 'react';
 
 function TarjetaProducto(props) {
     const producto = props.producto;
+    const carrito = useContext(ContextoCarrito);
+    const cantidadDeProducto = carrito.getCantidadDeProducto(producto.id);
 
     return (
         <Card>
@@ -16,7 +20,20 @@ function TarjetaProducto(props) {
                 <Card.Text>${producto.precio}</Card.Text>
                 <div className="botonesInicio">
                     <Button variant="primary">Ver más</Button>
-                    <Button variant="secondary">Agregar al carrito</Button>
+                    {cantidadDeProducto > 0 ?
+                        <>
+                            <Form as={Row}>
+                                <Form.Label column="true" sm="6">En el carrito: {cantidadDeProducto}</Form.Label>
+                                <Col sm="6">
+                                    <Button className="mx-7" onClick={() => carrito.addUnoAlCarrito(producto.id)} sm="6">+</Button>
+                                    <Button className="mx-10" onClick={() => carrito.removeUnoDelCarrito(producto.id)} sm="6">-</Button>
+                                </Col>
+                            </Form>
+                            <Button className="my-2"  onClick={() => carrito.deleteDelCarrito(producto.id)} variant="danger">Eliminar del carrito</Button>
+                        </> :
+                        <Button onClick={() => carrito.addUnoAlCarrito(producto.id)} variant="secondary">Agregar al
+                            carrito</Button>
+                    }
                 </div>
             </Card.Body>
         </Card>
