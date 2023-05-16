@@ -1,6 +1,8 @@
-import {Card, Button, Form, Row, Col} from 'react-bootstrap'
+import {Card, Button, Form, Row, Col} from 'react-bootstrap';
 import {ContextoCarrito} from '../ContextoCarrito.js';
 import {useContext} from 'react';
+import Detalle from '../paginas/Detalle.js';
+import {Link, useMatch, useResolvedPath} from "react-router-dom";
 
 function TarjetaProducto(props) {
     const producto = props.producto;
@@ -19,7 +21,11 @@ function TarjetaProducto(props) {
                 <Card.Text>{producto.desc}</Card.Text>
                 <Card.Text>${producto.precio}</Card.Text>
                 <div className="botonesInicio">
-                    <Button variant="primary">Ver más</Button>
+                    <div hidden={true}>
+                        <Detalle productoID={producto}></Detalle>
+                    </div>
+                    <Button variant="primary" href="/detalles">Ver más</Button>
+
                     {cantidadDeProducto > 0 ?
                         <>
                             <Form as={Row}>

@@ -8,6 +8,7 @@ import Carrito from "./paginas/Carrito";
 import {Route, Routes} from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ProveedorCarrito from './ContextoCarrito';
+import Detalle from './paginas/Detalle.js';
 
 function App() {
     return (
@@ -21,6 +22,7 @@ function App() {
                     <Route path="/contacto" element={<Contacto/>}/>
                     <Route path="/login" element={<Acceso/>}/>
                     <Route path="/carrito" element={<Carrito/>}/>
+                    <Route path="/detalles" element={<Detalle/>}/>
                 </Routes>
             </div>
             </ProveedorCarrito>

@@ -4,10 +4,19 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faCartShopping, faUser} from '@fortawesome/free-solid-svg-icons';
 import logo from '../img/iconLogoEmpresa.png';
 import {ContextoCarrito} from '../ContextoCarrito.js';
-import {useContext} from 'react';
+import {useContext, useState} from 'react';
+import Carrito from '../paginas/Carrito.js';
+
 
 export default function Navbar() {
+
     const carrito = useContext(ContextoCarrito);
+    console.log(carrito);
+    const contadorProductos = carrito.items.reduce((suma, producto) => suma + producto.cantidad, 0);
+
+    const [show, setShow] = useState(false);
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
 
     return (
         <nav className="nav">
@@ -24,12 +33,13 @@ export default function Navbar() {
                         <p>Iniciar sesión</p>
                     </center>
                 </Linko>
+
                 <Linko to="/carrito">
                     <center>
                         <div className="carrito">
                             <FontAwesomeIcon icon={faCartShopping}/>
                             <p>Carrito</p>
-                            <p className="cantidadCarrito">0</p>
+                            <p className="cantidadCarrito">{contadorProductos}</p>
                         </div>
                     </center>
                 </Linko>
